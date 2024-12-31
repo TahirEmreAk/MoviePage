@@ -2,7 +2,13 @@
     border: 1px solid #c2c2c2;
 }
 
-body {}
+body {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 header,
 main,
@@ -39,9 +45,16 @@ header nav {
 header nav a {
     text-decoration: none;
     border: 3px double black;
+    border-radius: 4px;
     color: blue;
     padding: 0.25rem;
     font-weight: 550;
+}
+
+header nav a:hover {
+    cursor: pointer;
+    background-color: green;
+    color: white;
 }
 
 header .search {
@@ -49,6 +62,20 @@ header .search {
     gap: 1rem;
     margin-right: 3rem;
     align-items: center;
+    position: relative;
+}
+
+.search input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 6px 30px 6px 10px;
+}
+
+.search #ara {
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .profile {
@@ -56,4 +83,22 @@ header .search {
     object-fit: cover;
     width: 2rem;
     aspect-ratio: 1/1;
+}
+
+main {
+    background-image: url("/src/images/stargate1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    padding: 4rem 3rem;
+    text-shadow: 1px 1px red;
+}
+
+main h1,
+p {
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin: 1rem auto;
+
 }
