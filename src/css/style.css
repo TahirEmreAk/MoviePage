@@ -1,0 +1,59 @@
+* {
+    border: 1px solid #c2c2c2;
+}
+
+body {}
+
+header,
+main,
+section,
+footer {
+    padding: 1rem;
+}
+
+#wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 150px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    border: 3px double black;
+    color: blue;
+    padding: 0.25rem;
+    font-weight: 550;
+}
+
+header .search {
+    display: flex;
+    gap: 1rem;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+.profile {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 2rem;
+    aspect-ratio: 1/1;
+}
