@@ -12,7 +12,6 @@ body {
 
 header,
 main,
-section,
 footer {
     padding: 1rem;
 }
@@ -86,13 +85,13 @@ header .search {
 }
 
 main {
-    background-image: url("/src/images/stargate2.jpg");
+    background-image: url("/src/images/Interstellar.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: whitesmoke;
+    color: darkblue;
     padding: 4rem 3rem;
-    text-shadow: 1px 1px limegreen;
+    text-shadow: 1px 1px green;
 }
 
 main h1,
@@ -100,11 +99,26 @@ p,
 ul {
     font-weight: 600;
     line-height: 1.5rem;
-
-
+    width: 70%;
 }
 
-.hero-content {
+.movie-info .user-rating,
+.imdb-rating {
+    margin-right: 3px;
+}
+
+.movie-info .rating-source,
+.maturity-rating {
+    margin-right: 7px;
+}
+
+.maturity-rating {
+    border: 1px dashed grey;
+    padding: 0 3px;
+}
+
+.hero-content,
+.suggestion-row {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -122,4 +136,191 @@ ul {
     text-align: center;
     cursor: pointer;
     width: fit-content;
+    margin-top: 1rem;
+}
+
+.suggestion-row .suggestion-title,
+.suggestion-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.suggestion-content {
+    margin-bottom: 4rem;
+}
+
+.suggestion-title a {
+    font-size: 0.9rem;
+}
+
+.suggestion-row h2 {
+    font-weight: 600;
+
+}
+
+.suggestion-item-content {
+    display: flex;
+    row-gap: 0.8rem;
+    flex-direction: column;
+    border: 2px solid #c2c2c2;
+    padding: 2rem 4rem 2rem 1rem;
+    background-color: darkgrey;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: whitesmoke;
+    font-size: 14px;
+    margin-top: 2rem;
+    padding: 2rem;
+
+}
+
+.help {
+    width: 80%;
+    padding-right: 3rem;
+
+}
+
+.help nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    color: bisque;
+    text-decoration: none;
+}
+
+.help nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.copyright {
+    text-align: justify;
+}
+
+.social-apps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 5rem;
+}
+
+.social-apps p {
+    margin-bottom: 1.2vh;
+    font-weight: bold;
+}
+
+.social-apps img {
+    width: 30px;
+    height: 26px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.store-apps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.store-buttons {}
+
+.store-apps p {
+    margin-bottom: 1vh;
+    font-weight: bold;
+}
+
+.store-buttons img {
+    width: 100px;
+    height: auto;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+
+@media screen and (max-width: 700px) {
+    header {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search input {
+        width: 70%;
+    }
+
+    .links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .suggestion-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .suggestion-item-content {
+        width: calc(50% - 0.25rem);
+        padding: 0.75rem;
+
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .help {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .help nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-apps,
+    .store-apps {
+        padding-right: 0;
+        align-items: center;
+    }
+
+    .store-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .suggestion-item-content {
+        width: 100%;
+    }
 }
